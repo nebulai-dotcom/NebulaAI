@@ -5,14 +5,28 @@
     font-family:Arial, sans-serif;
 }
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#050816,#0b1026,#1b1240);
-    color:white;
-    overflow:hidden;
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #050014, #001f3f, #12002b, #003333);
+    background-size: 400% 400%;
+    animation: nebulaMove 12s ease infinite;
+}
+
+@keyframes nebulaMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .background{
@@ -24,22 +38,17 @@ body{
     radial-gradient(circle at 80% 30%,rgba(153,0,255,.2),transparent 40%),
     radial-gradient(circle at 50% 80%,rgba(255,0,128,.15),transparent 40%);
     z-index:-1;
-}
+    }
 
-.container{
-    width:90%;
-    max-width:900px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 0 40px rgba(0,0,0,.4);
-}
+h1 {
+    text-align: center;
+    font-size: 40px;
 
-h1{
-    text-align:center;
-    font-size:40px;
+    color: white;
+    text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #0088ff;
 }
 
 p{

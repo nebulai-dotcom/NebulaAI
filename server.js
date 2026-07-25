@@ -9,11 +9,15 @@ let userMemory = JSON.parse(fs.readFileSync("memory.json"));
 app.use(express.json());
 app.use(express.static("."));
 
-let username = "";
+let username = ""
 
 if (fs.existsSync("memory.json")) {
     let memory = JSON.parse(fs.readFileSync("memory.json"));
     username = memory.username || "";
+} else {
+    fs.writeFileSync("memory.json", JSON.stringify({
+        username: ""
+    }));
 }
 
 const capitals = {

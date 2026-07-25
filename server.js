@@ -2,7 +2,11 @@ const express = require("express");
 const fs = require("fs");
 const app = express();
 let chatHistory = [];
-let userMemory = JSON.parse(fs.readFileSync("memory.json"));
+let userMemory = {};
+
+if (fs.existsSync("memory.json")) {
+    userMemory = JSON.parse(fs.readFileSync("memory.json"));
+}
 
 
 

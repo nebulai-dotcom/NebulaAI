@@ -33,46 +33,19 @@ button.onclick = async function() {
 
     let aiBox = document.createElement("div");
     aiBox.className = "message ai";
-    aiBox.innerText = data.reply;
-
     messages.appendChild(aiBox);
 
+    let i = 0;
+
+    let typing = setInterval(() => {
+        aiBox.innerHTML += data.reply.charAt(i);
+        i++;
+
+        if (i >= data.reply.length) {
+            clearInterval(typing);
+        }
+
+    }, 50);
+
 });
-});
 
-const response = await fetch("/chat", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ message: text })
-
-});
-const data = await response.json();
-
-       let aiBox = messages.lastElementChild;
-
-aiBox.innerHTML = "";
-
-let i = 0;
-
-let typing = setInterval(() => {
-
-aiBox.innerHTML = "";
-
-let i = 0;
-
-let typing = setInterval(() => {
-
-aiBox.innerHTML = "";
-
-    i++;
-
-    if(i >= data.reply.length){
-        clearInterval(typing);
-    }
-
-}, 50); 
-
-    }, 1000);
-};

@@ -545,8 +545,9 @@ for (let country in capitals) {
     } catch {
         reply = "I couldn't solve that calculation.";
     }
-
-         else if (userMessage.toLowerCase().includes("thank")) {
+}
+         else if (userMessage.toLowerCase().includes("thank")) 
+    {
     reply = "You're welcome! I am always ready to help.";
 }
 

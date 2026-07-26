@@ -129,6 +129,7 @@ button:hover{
     border-radius:15px;
     max-width:80%;
     line-height:1.4;
+    color:black;
 }
 
 .user{

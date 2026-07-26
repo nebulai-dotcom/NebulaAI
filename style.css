@@ -165,3 +165,19 @@ button:hover{
     background:rgba(255,255,255,0.15);
     margin-right:auto;
 }
+
+.logo-area {
+    text-align: center;
+}
+
+.logo-area img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px cyan;
+}
+
+.logo-area h1 {
+    font-size: 40px;
+    text-shadow: 0 0 20px cyan;
+}

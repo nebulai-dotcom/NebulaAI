@@ -516,18 +516,6 @@ else if (userMessage.includes("minecraft")) {
 else if (userMessage.includes("help") || userMessage.includes("what do you know")) {
     reply = "I can help with:\n- Time and date\n- Memory\n- Calculations\n- Unit conversion\n- Facts\n- Jokes\n- General knowledge questions";
 }
-
-    else if (userMessage.toLowerCase().includes("thank")) {
-    reply = "You're welcome! I am always ready to help.";
-}
-
-else if (userMessage.toLowerCase().includes("bye")) {
-    reply = "Goodbye! See you again.";
-}
-
-else {
-    reply = "I am still learning, but I will try my best to help you.";
-}
     
 else if (
     userMessage.includes("hello") ||
@@ -557,9 +545,18 @@ for (let country in capitals) {
     } catch {
         reply = "I couldn't solve that calculation.";
     }
+
+         else if (userMessage.toLowerCase().includes("thank")) {
+    reply = "You're welcome! I am always ready to help.";
 }
-        
-    
+
+else if (userMessage.toLowerCase().includes("bye")) {
+    reply = "Goodbye! See you again.";
+}
+
+else {
+    reply = "I am still learning, but I will try my best to help you.";
+}
     
 chatHistory.push("Nebula: " + reply);
 

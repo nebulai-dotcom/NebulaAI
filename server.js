@@ -223,9 +223,14 @@ let reply = "Iam Nebula AI, your futuristic assistant.";
     
 chatHistory.push("User: " + userMessage);
 
-if (userMessage.includes("my favorite game is")) {
-    userMemory.favoriteGame = userMessage.replace("my favorite game is", "").trim();
+else if (userMessage.toLowerCase().includes("my favorite game is")) {
+    userMemory.favoriteGame = userMessage
+        .toLowerCase()
+        .replace("my favorite game is", "")
+        .trim();
+
     fs.writeFileSync("memory.json", JSON.stringify(userMemory));
+
     reply = "I will remember your favorite game.";
 }
 

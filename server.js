@@ -269,6 +269,22 @@ else if (userMessage.toLowerCase().includes("what is my favorite food")) {
     reply = "Your favorite food is " + (userMemory.favoriteFood || "not saved yet.");
 }
 
+    else if (userMessage.toLowerCase().includes("time")) {
+
+    let now = new Date();
+
+    reply = "Current time is " + now.toLocaleTimeString();
+
+}
+
+else if (userMessage.toLowerCase().includes("date") || userMessage.toLowerCase().includes("today")) {
+
+    let today = new Date();
+
+    reply = "Today's date is " + today.toDateString();
+
+}
+
 else if (userMessage.toLowerCase().includes("what is my favorite color")) {
     reply = "Your favorite color is " + (userMemory.favoriteColor || "not saved yet.");
 }

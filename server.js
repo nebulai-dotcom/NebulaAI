@@ -538,7 +538,7 @@ for (let country in capitals) {
     }
 }
  
-    else if (userMessage.toLowerCase().includes("calculate")) 
+     if (userMessage.toLowerCase().includes("calculate")) 
 
     {
         

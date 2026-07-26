@@ -554,15 +554,15 @@ for (let country in capitals) {
     {
     reply = "You're welcome! I am always ready to help.";
 }
-
-else {
-    reply = "I am still learning, but I will try my best to help you.";
-}
-
+             
     else if (userMessage.toLowerCase().includes("bye")) {
     reply = "Goodbye! See you again.";
 }
 
+    else {
+    reply = "I am still learning, but I will try my best to help you.";
+}
+    
 chatHistory.push("Nebula: " + reply);
 
 res.json({

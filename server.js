@@ -578,7 +578,11 @@ else if (userMessage.toLowerCase().includes("how are you")) {
 else if (userMessage.toLowerCase().includes("what can you do")) {
     reply = "I can remember your information, answer basic questions, do calculations, and chat with you.";
 }
-    
+
+    else if (userMessage.toLowerCase().includes("what is my name")) {
+    reply = "Your name is " + (userMemory.name || "not saved yet.");
+}
+        
     else {
     reply = "I am still learning, but I will try my best to help you.";
 }

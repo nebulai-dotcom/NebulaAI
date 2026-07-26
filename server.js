@@ -536,8 +536,9 @@ for (let country in capitals) {
         reply = "The capital of " + country + " is " + capitals[country] + ".";
         break;
     }
+}
  
-    if (userMessage.toLowerCase().includes("calculate")) 
+    else if (userMessage.toLowerCase().includes("calculate")) 
 
     {
         

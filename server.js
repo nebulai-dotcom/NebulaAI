@@ -223,7 +223,7 @@ let reply = "Iam Nebula AI, your futuristic assistant.";
     
 chatHistory.push("User: " + userMessage);
 
-else if (userMessage.toLowerCase().includes("my favorite game is")) {
+if (userMessage.toLowerCase().includes("my favorite game is")) {
     userMemory.favoriteGame = userMessage
         .toLowerCase()
         .replace("my favorite game is", "")

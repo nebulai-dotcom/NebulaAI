@@ -289,6 +289,20 @@ else if (userMessage.includes("what is my hobby")) {
     reply = "Your hobby is " + (userMemory.hobby || "not saved yet.");
 }
 
+    else if (userMessage.toLowerCase().includes("forget my memory")) {
+
+    userMemory = {
+        favoriteGame: "",
+        favoriteFood: "",
+        favoriteColor: "",
+        hobby: ""
+    };
+
+    fs.writeFileSync("memory.json", JSON.stringify(userMemory));
+
+    reply = "I have forgotten your saved memories.";
+}
+
 // Calculator
 if (/^[0-9+\-*/().\s]+$/.test(userMessage)) {
     try {

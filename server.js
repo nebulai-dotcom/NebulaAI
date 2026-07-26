@@ -544,9 +544,7 @@ else if (userMessage.toLowerCase().includes("capital of")) {
 
 }
     
-     if (userMessage.toLowerCase().includes("calculate")) 
-
-    {
+    else if (userMessage.toLowerCase().includes("calculate") {
         
     let expression = userMessage.replace(/calculate/i, "").trim();
 

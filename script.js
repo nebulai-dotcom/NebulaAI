@@ -49,3 +49,6 @@ button.onclick = async function() {
 
 });
 
+}, 1000);
+
+};

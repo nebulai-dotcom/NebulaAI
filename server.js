@@ -261,6 +261,21 @@ else if (userMessage.includes("my hobby is")) {
     userMemory.hobby = userMessage.replace("my hobby is", "").trim();
     reply = "I will remember your hobby.";
 }
+    else if (userMessage.toLowerCase().includes("what is my favorite game")) {
+    reply = "Your favorite game is " + (userMemory.favoriteGame || "not saved yet.");
+}
+
+else if (userMessage.toLowerCase().includes("what is my favorite food")) {
+    reply = "Your favorite food is " + (userMemory.favoriteFood || "not saved yet.");
+}
+
+else if (userMessage.toLowerCase().includes("what is my favorite color")) {
+    reply = "Your favorite color is " + (userMemory.favoriteColor || "not saved yet.");
+}
+
+else if (userMessage.toLowerCase().includes("what is my hobby")) {
+    reply = "Your hobby is " + (userMemory.hobby || "not saved yet.");
+}
 
 else if (userMessage.includes("what is my favorite food")) {
     reply = "Your favorite food is " + (userMemory.favoriteFood || "not saved yet.");

@@ -534,14 +534,16 @@ else if (userMessage.includes("what is my favorite game")) {
 else if (userMessage.toLowerCase().includes("capital of")) {
 
     for (let country in capitals) {
-        if (userMessage.toLowerCase().includes("capital of " + country)) {
+
+        if (userMessage.toLowerCase().includes(country.toLowerCase())) {
             reply = "The capital of " + country + " is " + capitals[country] + ".";
             break;
         }
+
     }
 
 }
- 
+    
      if (userMessage.toLowerCase().includes("calculate")) 
 
     {

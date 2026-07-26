@@ -564,6 +564,21 @@ else if (userMessage.toLowerCase().includes("capital of")) {
     reply = "Goodbye! See you again.";
 }
 
+       else if (userMessage.toLowerCase().includes("my name is")) {
+    let name = userMessage.replace(/my name is/i, "").trim();
+    userMemory.name = name;
+    fs.writeFileSync("memory.json", JSON.stringify(userMemory));
+    reply = "Nice to meet you, " + name + "! I will remember your name.";
+}
+
+else if (userMessage.toLowerCase().includes("how are you")) {
+    reply = "I am doing great! I am ready to help you.";
+}
+
+else if (userMessage.toLowerCase().includes("what can you do")) {
+    reply = "I can remember your information, answer basic questions, do calculations, and chat with you.";
+}
+    
     else {
     reply = "I am still learning, but I will try my best to help you.";
 }

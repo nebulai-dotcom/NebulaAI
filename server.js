@@ -531,11 +531,15 @@ else if (userMessage.includes("what is my favorite game")) {
     reply = "Your favorite game is " + (userMemory.favoriteGame || "not saved yet.");
 }
 
-for (let country in capitals) {
-    if (userMessage.toLowerCase().includes("capital of " + country)) {
-        reply = "The capital of " + country + " is " + capitals[country] + ".";
-        break;
+else if (userMessage.toLowerCase().includes("capital of")) {
+
+    for (let country in capitals) {
+        if (userMessage.toLowerCase().includes("capital of " + country)) {
+            reply = "The capital of " + country + " is " + capitals[country] + ".";
+            break;
+        }
     }
+
 }
  
      if (userMessage.toLowerCase().includes("calculate")) 

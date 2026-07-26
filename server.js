@@ -537,7 +537,10 @@ for (let country in capitals) {
         break;
     }
  
-    if (userMessage.toLowerCase().includes("calculate")) {
+    if (userMessage.toLowerCase().includes("calculate")) 
+
+    {
+        
     let expression = userMessage.replace(/calculate/i, "").trim();
 
     try {
@@ -545,6 +548,8 @@ for (let country in capitals) {
     } catch {
         reply = "I couldn't solve that calculation.";
     }
+
+}
          else if (userMessage.toLowerCase().includes("thank")) 
     {
     reply = "You're welcome! I am always ready to help.";

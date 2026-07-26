@@ -10,9 +10,12 @@ body {
     height: 100vh;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #050014, #001f3f, #12002b, #003333);
-    background-size: 400% 400%;
-    animation: nebulaMove 12s ease infinite;
+    color: white;
+
+    background-image: url("nebula.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @keyframes nebulaMove {
